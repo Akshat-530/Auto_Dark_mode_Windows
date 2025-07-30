@@ -57,9 +57,13 @@ All helper scripts are saved to your **user profile directory** (e.g., `C:\Users
 
 ## 🚀 How to Use
 
-### 📥 Step 1: Download or Clone the Script
+### 📥 Step 1: Download and Run
 
-You can either clone this repository or just download `Auto_LightDarkScheduler.ps1`.
+1. **Download the latest version** from the [Releases] section.
+2. Extract the ZIP file.
+3. Run the `RUN_AutoDarkMode.bat` file as **Administrator**.
+4. Enter your preferred times for:
+   - **Light Mode** (e.g., `07:00`)
+   - **Dark Mode** (e.g., `19:00`)
+5. That’s it! Your PC will now automatically switch themes at the scheduled times.
 
-```bash
-git clone https://github.com/YOUR_USERNAME/Auto-LightDark-Mode-Scheduler.git

@@ -1,55 +1,65 @@
-# 🌗 Windows Auto Light/Dark Mode Scheduler
+# 🌗 Auto Light/Dark Mode Scheduler by AKSHAT_530
 
-A lightweight PowerShell script to automatically switch between Light and Dark mode on Windows — no background apps, no bloat, and no unnecessary resource usage. Just set it and forget it.
+A powerful, lightweight PowerShell tool to automate Windows theme switching between **Light** and **Dark** modes at your preferred times — without running any background apps or services.
 
-## 🛠 Features
+No bloat. No resource drain. Just smart, scheduled automation.
 
-- 🌓 Automatically switches between Light and Dark themes based on your schedule
-- ⚙️ No background services or apps required
-- 🚫 Zero resource usage after setup
-- 🧼 Simple, lightweight, and clean PowerShell-only implementation
-- 🔒 Safe to use — modifies only theme settings
+---
 
-## 📦 What's Included
+## ✨ Features
 
-- `Auto_LightDarkMode.ps1` – The main PowerShell script
-- Optional helper scripts (if any, e.g., for scheduling)
+- 🔁 Automatically switches between **Light** and **Dark** mode based on your schedule
+- 🔐 Requires **no third-party app** or background service
+- 🚀 Automatically sets correct theme **at logon**
+- 🧠 Fully refreshes all open Windows/Explorer UI elements
+- 🕒 Custom 24-hour format scheduling (e.g., 07:00 for Light, 19:00 for Dark)
+- 🗑️ Option to **fully remove tasks and reset theme** in one click
+- 📝 Logs every theme switch event to a `.txt` file
+- 💡 Safe to use — works purely with Windows Registry and Task Scheduler
 
-## 🖥️ Requirements
+---
 
-- Windows 10 or 11
-- PowerShell 5.1+ or PowerShell 7+
+## ⚙️ Requirements
+
+- 🪟 Windows 10 or 11
+- 🛠️ PowerShell 5.1 or later (Windows default)
+- 🔐 Must be run as **Administrator**
+
+---
+
+## 📦 Included in this Tool
+
+| Script/Component | Description |
+|------------------|-------------|
+| `Auto_LightDarkScheduler.ps1` | Main automation script |
+| `Set-Light-Mode.ps1` | Applies Light theme using registry |
+| `Set-Dark-Mode.ps1` | Applies Dark theme using registry |
+| `ThemeSwitchChecker.ps1` | Decides Light/Dark mode at logon |
+| `ThemeSwitchLog.txt` | Optional log for theme change events |
+
+All helper scripts are saved to your **user profile directory** (e.g., `C:\Users\YourName`).
+
+---
+
+## 📋 What This Script Does
+
+1. **Prompts you to enter two times**:
+   - One for switching to **Light mode**
+   - One for switching to **Dark mode**
+2. **Creates the following scheduled tasks**:
+   - `ThemeSwitch_Light`: triggers your Light Mode script daily
+   - `ThemeSwitch_Dark`: triggers your Dark Mode script daily
+   - `ThemeSwitch_StartupChecker`: checks time and sets correct mode **at logon**
+3. **Refreshes all open windows**, so the UI changes take effect immediately
+4. **Creates log entries** in a file named `ThemeSwitchLog.txt`
+
+---
 
 ## 🚀 How to Use
 
-1. **Download the script**  
-   Clone the repo or download the `.ps1` file directly.
+### 📥 Step 1: Download or Clone the Script
 
-2. **Edit your preferred schedule**  
-   Open the script in a text editor and customize the `lightTime` and `darkTime` variables as needed.
+You can either clone this repository or just download `Auto_LightDarkScheduler.ps1`.
 
-3. **Run the script once**  
-   It will create two scheduled tasks to switch themes at your desired times.
-
-4. **That's it!**  
-   Your system will now automatically switch between Light and Dark modes based on your schedule.
-
-## 📅 Example Schedule (Default)
-
-- Light mode: 7:00 AM
-- Dark mode: 7:00 PM
-
-Feel free to change these values in the script.
-
-## 🔧 Optional: Uninstall Scheduled Tasks
-
-To remove the automation, run the script again and choose the option to **remove scheduled tasks**.
-
-## 🧑‍💻 Author
-
-Made with 💻 by [AKSHAT_530](https://github.com/AKSHAT-530)
-
-## 📄 License
-
-MIT License – feel free to use, modify, and share!
-
+```bash
+git clone https://github.com/YOUR_USERNAME/Auto-LightDark-Mode-Scheduler.git
